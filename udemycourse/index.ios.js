@@ -1,53 +1,35 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
 
+// Import some code we need
 var React = require('react-native');
-var {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} = React;
+var AppRegistry = React.AppRegistry;
+var Text = React.Text;
+var View = React.View;
+var StyleSheet = React.StyleSheet;
 
-var udemycourse = React.createClass({
-  render: function() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
+// Create a react component
+var Weekdays = React.createClass({
+	render: function(){
+		return <View>
+			<Text> 
+			 Days of the week: 
+			</Text>
+		</View>
+	}
 });
 
+
+// Style the React component
 var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+	container: {
+		flex: 1,
+		flexDirection: 'row'
+		justifyContent: 'flex-end', //Moves stuff height wise
+		alignItems: 'flex-start' //Moves stuff width wise
+	}
 });
 
-AppRegistry.registerComponent('udemycourse', () => udemycourse);
+
+// Show the react component on the screen
+AppRegistry.registerComponent('weekdays',function() {
+	return Weekdays	
+});
