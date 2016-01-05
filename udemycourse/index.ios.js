@@ -1,3 +1,8 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
+//'use strict';
 
 // Import some code we need
 var React = require('react-native');
@@ -9,27 +14,24 @@ var StyleSheet = React.StyleSheet;
 // Create a react component
 var Weekdays = React.createClass({
 	render: function(){
-		return <View>
-			<Text> 
-			 Days of the week: 
+		return <View style={styles.container}>
+			<Text>
+			 Days of the week:
 			</Text>
 		</View>
 	}
 });
 
-
 // Style the React component
 var styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		flexDirection: 'row'
-		justifyContent: 'flex-end', //Moves stuff height wise
-		alignItems: 'flex-start' //Moves stuff width wise
+		justifyContent: 'center', //Moves stuff height wise
+		alignItems: 'center' //Moves stuff width wise
 	}
 });
 
-
 // Show the react component on the screen
-AppRegistry.registerComponent('weekdays',function() {
-	return Weekdays	
+AppRegistry.registerComponent('udemycourse',function() {
+	return Weekdays
 });
