@@ -6,10 +6,12 @@ var {
 
 var Parse = require('parse/react-native');
 var Signin = require('./components/authentication/signin');
+var Signup = require('./components/authentication/signup');
 
 var ROUTES = {
-  signin: Signin
-}
+  signin: Signin,
+  signup: Signup
+};
 
 module.exports = React.createClass({
   componentWillMount: function(){
